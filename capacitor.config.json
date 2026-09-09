@@ -1,0 +1,8 @@
+{
+  "appId": "org.fieldready.competencystudy",
+  "appName": "FieldReady",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

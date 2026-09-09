@@ -1,0 +1,16 @@
+FIELDREADY COMPETENCY STUDY — GITHUB UPLOAD
+
+Upload EVERYTHING in this folder to the root of a GitHub repository.
+
+Required root items:
+- package.json
+- capacitor.config.json
+- www/
+- android-overrides/
+- scripts/
+- .github/workflows/build-android-apk.yml
+
+Then commit to main and run:
+Actions > Build FieldReady Android APK > Run workflow
+
+The workflow creates the Android project and APK. No prebuilt APK is included in this package.

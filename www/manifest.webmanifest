@@ -1,0 +1,9 @@
+{
+  "name": "FieldReady Competency Study",
+  "short_name": "FieldReady",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0d1310",
+  "theme_color": "#16231a",
+  "description": "Offline longitudinal TCCC nurse competency study evaluator."
+}

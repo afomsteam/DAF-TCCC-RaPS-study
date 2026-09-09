@@ -1,0 +1,21 @@
+{
+  "name": "fieldready-competency-study",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline evaluator app for a longitudinal TCCC nurse competency study",
+  "scripts": {
+    "verify": "node scripts/verify-study-config.js",
+    "android:add": "npx cap add android",
+    "android:sync": "npx cap sync android",
+    "android:debug": "npx cap sync android && bash scripts/apply-android-branding.sh && cd android && ./gradlew assembleDebug --no-daemon"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.0.0",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/core": "^7.0.0",
+    "@capacitor/filesystem": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.0.0"
+  }
+}

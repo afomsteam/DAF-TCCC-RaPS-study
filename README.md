@@ -6,20 +6,21 @@ This repository is source-only. It does **not** include a prebuilt APK. GitHub A
 
 The app retains the useful evaluator/program-manager framework from the uploaded baseline APK: offline/local storage, study-session creation, participant roster, installation/MAJCOM metadata, direct-observation grading, critical-task flags, timers, notes, root-cause capture, remediation attempt support, class closure, PDF/CSV/JSON export, management analytics, and Android file saving.
 
-The old Tier 1, Tier 2, and Tier 4 curriculum content is removed. The old four-tier selector is replaced by study assessment modules.
+The old four-tier selector is replaced by controlled study assessment modules. The **full Tier 3 CMC assessment is retained/restored**; Tier 1, Tier 2, and Tier 4 curriculum modules are not carried forward as standalone tiers.
 
 ## Study assessment modules
 
-1. **TTA — 28-point study Tactical Trauma Assessment**
-   - 28 total criteria
-   - 19 critical criteria tracked separately
-   - Study threshold: 80% (PASS / applicable PASS+FAIL)
-   - Derived from the uploaded study checklist; the May 2026 CMC abbreviated checklist is used as a validation reference rather than silently replacing the study instrument.
+1. **CMC — Combat Medic / Corpsman Tactical Trauma Assessment — Abbreviated**
+   - Full Tier 3 CMC assessment restored from the uploaded v2.21.0 baseline
+   - Cross-checked to `CMC.pdf` (`TCCC-CMC-TTA-05-02`, 30 MAY 26)
+   - 16 sections / 124 evaluator criteria / 28 critical criteria
+   - Restores **Care Under Fire (CUF)** and **Tactical Field Care (TFC)** before the full MARCH-PAWS sequence
+   - Also restores Head Injury / MACE 2, CPR, Communication, Documentation, Preparation for Evacuation, the original CMC scoring configuration, and all seven CMC timers
 
 2. **TQ — Two-Handed Windlass Tourniquet Application**
    - Uses only TQ PDF pages 1–2
    - 15 criteria / 11 critical
-   - Includes 1-minute and 3-minute source timers
+   - Includes a prominent count-up timer for the <1:00 completion standard plus the 3-minute documentation timer
 
 3. **NPA — Nasopharyngeal Airway Insertion**
    - Uses only Airway PDF page 4
@@ -42,13 +43,16 @@ The build adds study-specific fields without requiring a backend:
 - Baseline / 3-month pre / 3-month post / 6-month pre / 6-month post timepoint
 - Control / Frequency-Based / Deliberate-Practice study arm
 - Privacy-safe Participant ID
+- Clinical years of experience
+- AFSC
+- Current work section / clinical area
 - Practice-session count
 - Feedback/coaching count
 - Trials-to-mastery count
 - Evaluator identifier
 - Attempt and remediation data
 
-These fields are included in the detailed CSV exports for longitudinal analysis.
+These fields are included in the participant roster, CSV imports/exports, backups, and individual performance summary output for longitudinal analysis.
 
 ## Branding
 
@@ -71,7 +75,7 @@ The workflow uses Node 24 and Java 21, creates the Capacitor Android wrapper, sy
 
 ## Important source-control rule
 
-The individual-skill assessment content is deliberately limited to the pages specified for the study. Do not replace these criteria with newer or broader checklists without study-protocol approval. Newer CMC material can be used to flag validation questions, but the validated study instrument should remain stable unless the protocol is formally amended.
+The **CMC module is frozen to the restored Tier 3 baseline** and should not be shortened or rewritten without deliberate content-control review. The four individual-skill modules are deliberately limited to the page ranges specified for the study. `npm run verify` checks the complete restored CMC object and the selected-skill counts before an Android build.
 
 ## Local data warning
 

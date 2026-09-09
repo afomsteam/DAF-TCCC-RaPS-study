@@ -263,3 +263,8 @@ body.modalOpen{overflow:hidden}
 .studyMetricGrid label{display:grid;gap:6px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.05em}
 .studyMetricGrid input{width:100%;min-height:48px;border:1px solid #46564c;background:#101713;color:#fff;border-radius:8px;padding:10px}
 @media(max-width:720px){.studyMetricGrid{grid-template-columns:1fr}}
+
+/* Study v0.1.1 — prominent TQ count-up timer */
+.timerProminent{border:2px solid rgba(208,162,82,.72);box-shadow:0 0 0 1px rgba(208,162,82,.16),0 12px 28px rgba(0,0,0,.28)}
+.timerProminent .timerDisplay{font-size:2.45rem;letter-spacing:.04em}
+.countUpBadge{display:inline-block;margin-left:6px;padding:2px 6px;border-radius:5px;font-size:9px;font-weight:900;letter-spacing:.06em;background:#263d50;color:#d9eefb;border:1px solid #54738a;vertical-align:middle}

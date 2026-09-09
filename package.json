@@ -1,6 +1,6 @@
 {
   "name": "fieldready-competency-study",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "description": "Offline evaluator app for a longitudinal TCCC nurse competency study",
   "scripts": {

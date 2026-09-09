@@ -1,11 +1,11 @@
 window.TCCC_TIERS = {
   "1": {
     "id": "1",
-    "shortName": "TTA",
-    "name": "Tactical Trauma Assessment — Study 28-Point",
-    "subtitle": "Longitudinal Nurse Competency Study",
-    "source": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation",
-    "instructions": "Study scoring: grade all 28 MARCH-PAWS criteria using direct observation. Overall study score is PASS ÷ (PASS + FAIL), with NT excluded. Study threshold = 80%. Critical-task completion is tracked separately as 19/19 and does not silently override the study percentage; evaluators should review any critical failure during study adjudication. N/O remains unresolved until adjudicated.",
+    "shortName": "CMC",
+    "name": "Combat Medic / Corpsman",
+    "subtitle": "Tactical Trauma Assessment — Abbreviated",
+    "source": "TCCC-CMC-TTA-05-02 · 30 MAY 26",
+    "instructions": "Grade the CMC scenario in clinical sequence. Every critical criterion requires an explicit evaluator selection (PASS / FAIL / NT / N/O); critical criteria are never bulk-passed. Noncritical NT items are excluded from the score. N/O remains unresolved until adjudicated. DAF additions are labeled DAF Supplemental and are graded as configured, not automatically critical. DAF proficiency score = PASS ÷ (PASS + FAIL), minimum 75%, with no failed critical criterion and required global timing standards met.",
     "ratings": [
       {
         "key": "pass",
@@ -24,269 +24,1022 @@ window.TCCC_TIERS = {
         "label": "N/O"
       }
     ],
-    "passRule": "study_80_percent_track_critical_separately",
-    "minimumScore": 0.8,
-    "requireAllCritical": false,
-    "proficiencyLabel": "Study TTA Threshold Met",
+    "passRule": "75_percent_no_failed_critical_no_unresolved_critical_no_unresolved_no_global_timer_met",
+    "proficiencyLabel": "Demonstrated Medic/Corpsman Proficiency",
     "attempts": [
       "1st",
       "2nd"
     ],
     "sections": [
       {
-        "code": "M",
-        "title": "M — Assessed and Treated Massive Hemorrhage",
+        "code": "CUF",
+        "title": "PERFORMED CARE UNDER FIRE (CUF)",
         "items": [
           {
-            "id": "TTA-01",
-            "text": "Performed blood sweep of: Neck, Axillary, Inguinal, and Extremities",
+            "id": "CMC-001",
+            "text": "Returned fire to gain fire superiority and took cover",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-02",
-            "text": "Assessed effectiveness of TQs placed in CUF; if ineffective, applied deliberate TQ",
+            "id": "CMC-002",
+            "text": "Directed casualty to remain engaged as a combatant, if appropriate; or to move to cover and apply self-aid, if able",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-03",
-            "text": "Applied TQ directly to skin, 2–3 inches above bleed site",
-            "critical": true,
-            "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
-          },
-          {
-            "id": "TTA-04",
-            "text": "Packed any wounds not amenable to TQs with hemostatic agent (held pressure for 3 minutes) and applied pressure bandages",
+            "id": "CMC-003",
+            "text": "Performed casualty drag/carry to move casualty as tactical situation permitted",
             "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-004",
+            "text": "Extracted casualty from sources of burning and stopped burning process if needed",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-005",
+            "text": "Addressed Life-threatening Extremity Bleeding: applied a CoTCCC-recommended limb tourniquet over the uniform, clearly proximal to the bleeding site, or high and tight if the bleeding site was not readily apparent using the casualty’s JFAK and supplies",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          }
+        ]
+      },
+      {
+        "code": "TFC",
+        "title": "PERFORMED TACTICAL FIELD CARE",
+        "items": [
+          {
+            "id": "CMC-006",
+            "text": "Established security perimeter/maintained tactical situational awareness",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-007",
+            "text": "Took body substance isolation precautions, if tactical situation permitted",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-008",
+            "text": "Triaged casualties as required",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-009",
+            "text": "Verbalized the meaning of MARCH PAWS and used the sequence to perform the tactical trauma assessment",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          }
+        ]
+      },
+      {
+        "code": "M",
+        "title": "ASSESSED AND TREATED MASSIVE HEMORRHAGE",
+        "items": [
+          {
+            "id": "CMC-010",
+            "text": "Performed blood sweep of: Neck, Axillary, Inguinal, Anterior, Posterior, and Extremities",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-011",
+            "text": "Assessed effectiveness of TQs placed in CUF, if ineffective applied deliberate TQ",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-012",
+            "text": "Applied a deliberate TQ directly to skin, 2–3 inches above bleed site, if not done in CUF (or applied 2nd TQ side-by-side if bleeding not controlled with the 1st TQ)",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-013",
+            "text": "Applied a second tourniquet side-by-side if bleeding was not controlled with the first tourniquet",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-014",
+            "text": "Packed any wounds not amenable to TQs use with Combat Gauze or another CoTCCC-recommended hemostatic dressing/adjuncts (held pressure for 3 minutes) and applied pressure bandages",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-015",
+            "text": "Packed and dressed junctional wounds with a CoTCCC-recommended hemostatic dressing or adjunct and applied junctional TQ(s), without delay when indicated and available",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-016",
+            "text": "Performed initial hemorrhagic shock assessment",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           }
         ]
       },
       {
         "code": "A",
-        "title": "A — Assessed and Secured the Airway",
+        "title": "ASSESSED AND SECURED THE AIRWAY",
         "items": [
           {
-            "id": "TTA-05",
-            "text": "Used head-tilt/chin-lift or jaw-thrust maneuver to open airway, if needed",
+            "id": "CMC-017",
+            "text": "Assessed for unobstructed airway",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-06",
-            "text": "Inserted nasopharyngeal airway (NPA) in an unconscious or semiconscious casualty",
+            "id": "CMC-018",
+            "text": "Identified traumatic airway obstruction or impending traumatic airway obstruction",
             "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-07",
-            "text": "Cleared excess secretions using manual or mechanical suctioning, if indicated",
+            "id": "CMC-019",
+            "text": "Allowed conscious casualty to sit up, lean forward, or assume the position that best protected the airway",
             "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-020",
+            "text": "Placed unconscious casualty in the recovery position with head tilted back and chin away from chest",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-021",
+            "text": "Used suction, if available and appropriate",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-022",
+            "text": "Cleared excess secretions using mechanical or manual suctioning, if indicated",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-023",
+            "text": "If previous measures unsuccessful or airway obstruction is unmanageable, perform cricothyroidotomy. NOTE: Use lidocaine on conscious casualties",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-024",
+            "text": "Confirmed airway placement with continuous EtCO2 capnography, if available",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-025",
+            "text": "Frequently reassess airway patency, SpO2, and EtCO2, as airway status changed over time",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-026",
+            "text": "Did not perform cervical spine stabilization for casualty with only penetrating trauma",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           }
         ]
       },
       {
         "code": "R",
-        "title": "R — Assessed Respirations",
+        "title": "ASSESSED RESPIRATION",
         "items": [
           {
-            "id": "TTA-08",
-            "text": "Inspected for torso wounds (front and back)",
+            "id": "CMC-027",
+            "text": "Removed and opened body armor as tactically feasible and inspected torso wounds (front and back)",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-09",
-            "text": "Assessed breathing and initiated pulse oximetry, if available",
+            "id": "CMC-028",
+            "text": "Assessed breathing and initiated pulsed oximetry, if available",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-10",
-            "text": "Assessed for signs of tension pneumothorax (PTX). If present, burped and/or removed and reapplied any chest seal previously placed. If present without chest seal, or if chest-seal burp did not resolve tension PTX signs, performed needle decompression of the chest (NDC). Reassessed to confirm NDC was successful.",
+            "id": "CMC-029",
+            "text": "Suspected for tension pneumothorax with significant torso trauma or primary blast injury with respiratory distress, unilateral decreased breath sounds, hypoxia, shock, or traumatic arrest",
             "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-11",
-            "text": "Applied a vented chest seal to all open chest wound(s)",
+            "id": "CMC-030",
+            "text": "Applied vented chest seal to all open or sucking chest wounds",
             "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-031",
+            "text": "Used a non-vented chest seal if vented seal was unavailable",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-032",
+            "text": "Burped or removed chest seal if increasing hypoxia, respiratory distress, hypotension, or suspected tension pneumothorax developed",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-033",
+            "text": "Performed needle decompression (NDC) for suspected tension pneumothorax; used a 10-gauge or 14-gauge, 3.25-inch needle/catheter; used the 5th ICS in the AAL or the 2nd ICS in the MCL",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-034",
+            "text": "Held catheter in place for 5 to 10 seconds, removed needle, and left catheter in place",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-035",
+            "text": "Reassessed NDC effectiveness using respiratory improvement, air release, SpO₂ response, return of consciousness, or radial pulse",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-036",
+            "text": "Repeated NDC at alternate approved site if initial NDC failed",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-037",
+            "text": "Considered decompression of the opposite side based on mechanism of injury and physical findings",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-038",
+            "text": "Monitored for increasing hypoxia, respiratory distress, hypotension, or subsequent tension pneumothorax",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-039",
+            "text": "Support inadequate ventilation with properly sized NPA and a 1000mL resuscitator BVM, when indicated",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-040",
+            "text": "Used continuous SpO₂ and EtCO₂ monitoring, when available",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-041",
+            "text": "Reassessed response after NDC and repeated NDC as indicated",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           }
         ]
       },
       {
         "code": "C",
-        "title": "C — Assessed Circulation",
+        "title": "ASSESSED CIRCULATION",
         "items": [
           {
-            "id": "TTA-12",
-            "text": "Assessed for signs of pelvic fracture",
+            "id": "CMC-042",
+            "text": "Assessed for suspected pelvic fracture after severe blunt force or blast injury with one or more of the following: pelvic pain, major lower limb amputation or near amputation, physical exam findings suggestive of pelvic fracture, unconsciousness, or shock",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-13",
-            "text": "Exposed wounds/reassessed prior hemorrhage control and determined if TQs were still needed. Replaced high-and-tight TQ with deliberate TQ 2–3 inches above wound directly on skin if still indicated; if not required, converted to wound packing and pressure bandage; exposed and clearly marked all TQs with application time.",
-            "critical": true,
-            "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
-          },
-          {
-            "id": "TTA-14",
-            "text": "Assessed for hemorrhagic shock (checked radial pulses; carotid, if absent)",
-            "critical": true,
-            "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
-          },
-          {
-            "id": "TTA-15",
-            "text": "Inserted saline lock for shock or significant injuries with radial pulses",
+            "id": "CMC-043",
+            "text": "Applied pelvic compression device",
             "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-16",
-            "text": "Administered Blood Products (see separate checklist for steps)",
+            "id": "CMC-044",
+            "text": "Reassessed all prior tourniquets",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-045",
+            "text": "Exposed wound and determined if tourniquet was still needed",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-046",
+            "text": "If a limb tourniquet over the uniform was still needed, applied a second tourniquet directly to the skin, 2 to 3 inches above the bleeding site, then loosened the first tourniquet",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-047",
+            "text": "Confirmed bleeding control",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-048",
+            "text": "Checked distal pulse, if no traumatic amputation was present",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-049",
+            "text": "Tightened tourniquet or applied second tourniquet side-by-side if bleeding continued or distal pulse remained",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-050",
+            "text": "Converted limb or junctional tourniquet to hemostatic or pressure dressing only if casualty was not in shock, the wound could be closely monitored, and the tourniquet was not controlling bleeding from an amputated extremity",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-051",
+            "text": "Marked all tourniquets with time of application",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-052",
+            "text": "Documented tourniquet application, re-application, conversion, and removal times on DD Form 1380",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-053",
+            "text": "Assessed for hemorrhagic shock",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-054",
+            "text": "Established IV/IO access when casualty was in hemorrhagic shock, at significant risk of shock, or required medications but could not take them by mouth",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-055",
+            "text": "Administered TXA 2 g slow IV/IO push as soon as possible, but not later than 3 hours after injury, when indicated",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-056",
+            "text": "Administered blood products for hemorrhagic shock under approved protocol, using a fluid warming device when available",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-057",
+            "text": "Administered 1 g calcium after the first transfused blood product",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-058",
+            "text": "Reassessed casualty after each unit of blood products and discontinued resuscitation when radial pulse, mental status, or systolic BP target was met",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-059",
+            "text": "Assessed refractory shock for possible untreated tension pneumothorax and treated with repeated NDC, or finger thoracostomy/chest tube if trained and authorized",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-060",
+            "text": "Repositioned tourniquet directly to the skin once effective reposition tourniquet is applied; confirm no bleeding and no distal pulse, if there is no traumatic amputation",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-061",
+            "text": "Tightened the tourniquet or applied a second tourniquet side-by-side, if bleeding persists or distal pulse remains",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-062",
+            "text": "Convert limb or junctional tourniquet to hemostatic or pressure dressing only if: a) Casualty was not in shock; b) Wound could be closely monitored; c) Tourniquet was not controlling bleeding from an amputated extremity. NOTE: Do not remove a tourniquet in place more than 6 hours unless close monitoring and lab capability are available",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26",
+            "sourceDiscrepancy": false,
+            "sourceNote": "Program-adjudicated wording for operational use: wound CAN be closely monitored."
+          },
+          {
+            "id": "CMC-063",
+            "text": "Notified tactical leader if casualty required evacuation (from the MEDEVAC Request)",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           }
         ]
       },
       {
         "code": "H",
-        "title": "H — Hypothermia Treatment and Prevention / Head Injury",
+        "title": "H — HYPOTHERMIA TREATMENT AND PREVENTION",
         "items": [
           {
-            "id": "TTA-17",
-            "text": "Minimized casualty exposure to the environment",
-            "critical": true,
+            "id": "CMC-064",
+            "text": "Initiated early hypothermia prevention",
+            "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-18",
-            "text": "Employed active warming measures, if available",
+            "id": "CMC-065",
+            "text": "Minimized casualty exposure and insulated casualty from cold surfaces",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-19",
+            "id": "CMC-066",
+            "text": "Replace wet clothing, if feasible",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-067",
+            "text": "Applied active warming without placing active heat directly on skin",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-068",
+            "text": "Enclosed casualty in impermeable enclosure system, when available",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-069",
+            "text": "Warmed IV/IO fluids when equipment was available",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-086",
+            "text": "Employed active warming measures, applied exterior impermeable enclosure bag, if available",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          }
+        ]
+      },
+      {
+        "code": "H2",
+        "title": "H2 — HEAD INJURY / MACE 2",
+        "items": [
+          {
+            "id": "CMC-070",
+            "text": "Assessed for suspected head injury",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-071",
+            "text": "Identified suspected moderate/severe TBI: inability to follow simple instructions beyond 10 minutes after injury with suspected head injury and no alternate cause",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-072",
+            "text": "Prevented hypoxemia and hypotension in suspected moderate/severe TBI",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-073",
+            "text": "Maintained SpO₂ ≥ 92% when oxygen was available",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-074",
+            "text": "Targeted SBP >100 mmHg or normal radial pulse if BP monitoring was unavailable",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-075",
+            "text": "If hemorrhagic shock was present, prioritized hemorrhagic shock resuscitation",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-076",
+            "text": "If suspected moderate/severe TBI was present with no evidence of hemorrhage, administered 1 – 2 units of plasma when available and authorized",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-077",
+            "text": "If EtCO₂ monitoring was unavailable, ventilated at 10 breaths per minute using low tidal volume",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-078",
+            "text": "Elevated head and torso greater than 30 degrees if casualty was not in shock and tactically feasible",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-079",
+            "text": "Identified signs of herniation, including asymmetric or fixed/dilated pupils or posturing",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-080",
+            "text": "Administered hypertonic saline when herniation was suspected: 250 mL of 3% or 5% hypertonic saline IV/IO over at least 10 minutes OR 30 mL of 23.4% hypertonic saline IV/IO over at least 10 minutes",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-081",
+            "text": "Repeated hypertonic saline once in 20 minutes if no response. NOTE: Did not use hypertonic saline prophylactically",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-082",
+            "text": "Managed penetrating TBI or open skull fracture as treatable injury, not automatically expectant",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-083",
+            "text": "Applied hemostatic gauze with gentle pressure for active bleeding from wound or wound edges. NOTE: Did not pack wound cavity. Did not close wound with staples or sutures.",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-084",
+            "text": "Reassessed neurologic status every 5 to 10 minutes",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-085",
+            "text": "Reassessed prior interventions using (M/A/R/C/H)",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-087",
             "text": "Assessed for head injury (altered mental status, wounds, visual changes)",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-20",
-            "text": "Prevented secondary head injury by treating hypoxia and hypotension",
+            "id": "CMC-088",
+            "text": "Assessed for penetrating eye trauma",
             "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-21",
-            "text": "Assessed for eye trauma; if present, performed a visual acuity test and covered eye injury(ies) with rigid eye shield(s)",
+            "id": "CMC-089",
+            "text": "Performed rapid visual acuity test and documented findings",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-090",
+            "text": "Covered injured eye with rigid eye shield, not a pressure patch",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-091",
+            "text": "Administered Ceftriaxone 2 g IV/IM or Cefadroxil 1 g PO as soon as possible",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-092",
+            "text": "Reassess prior interventions (M/A/R/C/H)",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-093",
+            "text": "Initiated electronic monitoring if indicated and equipment was available",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-DAF-MACE2",
+            "text": "Administered MACE 2 examination.",
+            "critical": false,
+            "provenance": "daf",
+            "allowNA": true,
+            "sourceReference": "DAF requirement",
+            "dafSupplemental": true
           }
         ]
       },
       {
         "code": "P",
-        "title": "P — Controlled Pain",
+        "title": "CONTROLLED PAIN",
         "items": [
           {
-            "id": "TTA-22",
-            "text": "Checked for drug allergies",
+            "id": "CMC-094",
+            "text": "Checked for drug allergies before medication administration",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-23",
-            "text": "Disarmed casualty before administering medication(s) that alter mental status",
-            "critical": true,
-            "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
-          },
-          {
-            "id": "TTA-24",
-            "text": "Administered pain medication: medications from CWMP for casualty who can swallow; for mild-to-moderate pain without shock/respiratory distress, oral transmucosal fentanyl citrate; for moderate-to-severe pain or shock/respiratory distress, ketamine",
+            "id": "CMC-095",
+            "text": "Documented mental status using AVPU before ketamine",
             "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-096",
+            "text": "Disarmed casualty and considered disconnecting communications equipment when ketamine was administered",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-097",
+            "text": "Administered analgesia appropriate to casualty status: CWMP if casualty was mission capable and able to take PO medications OR Ketamine or esketamine for non-mission-capable casualty when indicated",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-098",
+            "text": "Monitored airway, breathing, circulation, mentation, and pain response after potent analgesics",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-099",
+            "text": "Avoided benzodiazepine co-administration with ketamine or esketamine",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           }
         ]
       },
       {
         "code": "ABX",
-        "title": "A — Administered Antibiotics",
+        "title": "ADMINISTERED ANTIBIOTICS",
         "items": [
           {
-            "id": "TTA-25",
-            "text": "Checked for drug allergies",
+            "id": "CMC-100",
+            "text": "Checked for drug allergies before administration of any medications",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           },
           {
-            "id": "TTA-26",
-            "text": "Administered antibiotics: from the CWMP for casualty who can swallow; administered ertapenem if casualty was unable to take oral medications",
+            "id": "CMC-101",
+            "text": "Administered for all open combat wounds and invasive procedures",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-102",
+            "text": "If casualty could take PO medications: Cefadroxil 1 g PO once daily (preferred) or Cephalexin 500 mg PO every 6 hours (alternative)",
             "critical": false,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-103",
+            "text": "If casualty could not take PO medications due to shock, unconsciousness, or other clinical limitation: Ceftriaxone 2 g IV/IO/IM once daily",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           }
         ]
       },
       {
         "code": "W",
-        "title": "W — Treated Additional Wounds",
+        "title": "TREATED ADDITIONAL WOUNDS",
         "items": [
           {
-            "id": "TTA-27",
-            "text": "Inspected and dressed known wounds: abdominal evisceration, amputation stumps, burns with dry sterile dressings, and impaled objects secured in place as indicated",
+            "id": "CMC-104",
+            "text": "Reassessed any and all medical interventions",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-105",
+            "text": "Reassessed known wounds and identify additional wounds",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-106",
+            "text": "Assessed for other wounds and, if indicated, apply dressing(s) for abdominal evisceration(s), dressing(s) to stump(s), dressing(s) to any impaled object(s)",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-107",
+            "text": "Monitored facial burns for inhalation injury and consider early airway intervention",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-108",
+            "text": "Estimated TBSA using Rule of Nines",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-109",
+            "text": "Covered burns with dry sterile dressings and prevent hypothermia",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-110",
+            "text": "If burns are >20% TBSA, start fluid resuscitation when IV/IO access is established",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-111",
+            "text": "Treated as trauma casualty with burns. NOTE: Do not give antibiotics for burns alone",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-112",
+            "text": "Used procedural sedation for severe injury, casualty safety, mission success, or invasive procedure: a) Ketamine 1 - 2mg/kg slow IV/IO push initial dose; b) Ketamine 300mg IM or 2 - 3mg/kg IM initial dose",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           }
         ]
       },
       {
         "code": "S",
-        "title": "S — Splinted Fractures",
+        "title": "SPLINT FRACTURES",
         "items": [
           {
-            "id": "TTA-28",
+            "id": "CMC-113",
             "text": "Splinted any fractures without disrupting any impaled objects",
             "critical": true,
             "provenance": "source",
-            "sourceReference": "Study 28-point TCCC Trauma Assessment (MARCH-PAWS) checklist · adapted from CoTCCC Module 5 (2023); CMC 30 MAY 26 used for validation"
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-114",
+            "text": "Rechecked distal pulse, motor, and sensation after splinting when feasible",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          }
+        ]
+      },
+      {
+        "code": "CPR",
+        "title": "CARDIOPULMONARY RESUSCITATION",
+        "items": [
+          {
+            "id": "CMC-115",
+            "text": "Considered bilateral NDC for casualty with torso trauma or polytrauma who had no pulse and no respirations before discontinuing care",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          }
+        ]
+      },
+      {
+        "code": "COMMS",
+        "title": "COMMUNICATION",
+        "items": [
+          {
+            "id": "CMC-116",
+            "text": "Communicated with the casualty, if possible",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-117",
+            "text": "Communicated with tactical leadership and reported lines 3, 4, and 5 from the MEDEVAC Request report",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-118",
+            "text": "Communicated with medical evacuation personnel and relayed MIST report",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          }
+        ]
+      },
+      {
+        "code": "DOC",
+        "title": "DOCUMENTATION",
+        "items": [
+          {
+            "id": "CMC-119",
+            "text": "Documented all findings and treatments on a DD Form 1380 and attached it to the casualty",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          }
+        ]
+      },
+      {
+        "code": "EVAC",
+        "title": "PREPARED FOR EVACUATION",
+        "items": [
+          {
+            "id": "CMC-120",
+            "text": "Placed and secured casualty on litter for evacuation, if not completed already",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-121",
+            "text": "Secured all loose bandages, equipment, hypothermia wraps, and litter straps, etc , as needed",
+            "critical": true,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-122",
+            "text": "Staged casualties for evacuation and identified litter team(s)",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
+          },
+          {
+            "id": "CMC-123",
+            "text": "Maintained security/safety at the evacuation point",
+            "critical": false,
+            "provenance": "source",
+            "sourceReference": "TCCC-CMC-TTA-05-02 · 30 MAY 26"
           }
         ]
       }
     ],
     "timers": [
       {
-        "id": "tta_wound_pressure",
+        "id": "cmc_overall",
+        "section": "GLOBAL",
+        "label": "Overall Tactical Trauma Assessment",
+        "mode": "max",
+        "seconds": 1800,
+        "standard": "≤ 30:00",
+        "startLabel": "START TTA",
+        "stopLabel": "STOP TTA",
+        "provenance": "source",
+        "requiredForPass": true,
+        "repeatable": false,
+        "timerKind": "global",
+        "pausePolicy": "admin-only",
+        "resetPolicy": "protected",
+        "continuousRequired": false,
+        "gradingClock": "wall"
+      },
+      {
+        "id": "cmc_cuf_tq",
+        "section": "CUF",
+        "label": "CUF Tourniquet — Bleeding Control",
+        "mode": "max",
+        "seconds": 60,
+        "standard": "≤ 1:00",
+        "startLabel": "START TQ",
+        "stopLabel": "BLEEDING CONTROLLED",
+        "provenance": "daf",
+        "linkedItemId": "CMC-005",
+        "requiredForPass": true,
+        "repeatable": true,
+        "timerKind": "clinical",
+        "pausePolicy": "tactical-and-admin",
+        "resetPolicy": "new-instance",
+        "continuousRequired": false,
+        "gradingClock": "wall"
+      },
+      {
+        "id": "cmc_wound_pressure",
         "section": "M",
         "label": "Wound Packing Pressure",
         "mode": "min",
@@ -295,7 +1048,7 @@ window.TCCC_TIERS = {
         "startLabel": "START PRESSURE",
         "stopLabel": "RELEASE PRESSURE",
         "provenance": "source",
-        "linkedItemId": "TTA-04",
+        "linkedItemId": "CMC-014",
         "requiredForPass": true,
         "repeatable": true,
         "timerKind": "clinical",
@@ -303,11 +1056,93 @@ window.TCCC_TIERS = {
         "resetPolicy": "new-instance",
         "continuousRequired": true,
         "gradingClock": "continuous"
+      },
+      {
+        "id": "cmc_ndc_hold",
+        "section": "R",
+        "label": "NDC Catheter Hold",
+        "mode": "range",
+        "minSeconds": 5,
+        "maxSeconds": 10,
+        "standard": "5–10 sec",
+        "startLabel": "START HOLD",
+        "stopLabel": "RELEASE",
+        "provenance": "source",
+        "linkedItemId": "CMC-034",
+        "requiredForPass": true,
+        "conditional": true,
+        "repeatable": true,
+        "timerKind": "clinical",
+        "pausePolicy": "tactical-and-admin",
+        "resetPolicy": "new-instance",
+        "continuousRequired": true,
+        "gradingClock": "continuous"
+      },
+      {
+        "id": "cmc_hts_admin",
+        "section": "H2",
+        "label": "Hypertonic Saline Administration",
+        "mode": "min",
+        "seconds": 600,
+        "standard": "≥ 10:00",
+        "startLabel": "START HTS",
+        "stopLabel": "HTS COMPLETE",
+        "provenance": "source",
+        "linkedItemId": "CMC-080",
+        "requiredForPass": true,
+        "conditional": true,
+        "repeatable": true,
+        "timerKind": "clinical",
+        "pausePolicy": "tactical-and-admin",
+        "resetPolicy": "new-instance",
+        "continuousRequired": false,
+        "gradingClock": "active"
+      },
+      {
+        "id": "cmc_hts_repeat",
+        "section": "H2",
+        "label": "HTS Repeat Interval — if no response",
+        "mode": "min",
+        "seconds": 1200,
+        "standard": "≥ 20:00",
+        "startLabel": "START INTERVAL",
+        "stopLabel": "REASSESS / REPEAT",
+        "provenance": "source",
+        "linkedItemId": "CMC-081",
+        "requiredForPass": true,
+        "conditional": true,
+        "repeatable": true,
+        "timerKind": "clinical",
+        "pausePolicy": "tactical-and-admin",
+        "resetPolicy": "new-instance",
+        "continuousRequired": false,
+        "gradingClock": "wall"
+      },
+      {
+        "id": "cmc_neuro_reassess",
+        "section": "H2",
+        "label": "Neurologic Reassessment Interval",
+        "mode": "range",
+        "minSeconds": 300,
+        "maxSeconds": 600,
+        "standard": "5–10 min",
+        "startLabel": "START INTERVAL",
+        "stopLabel": "REASSESS",
+        "provenance": "source",
+        "linkedItemId": "CMC-084",
+        "requiredForPass": true,
+        "conditional": true,
+        "repeatable": true,
+        "timerKind": "clinical",
+        "pausePolicy": "tactical-and-admin",
+        "resetPolicy": "new-instance",
+        "continuousRequired": false,
+        "gradingClock": "wall"
       }
     ],
     "instantEvents": [],
-    "sourceItemCount": 28,
-    "dafItemCount": 0
+    "sourceItemCount": 123,
+    "dafItemCount": 28
   },
   "2": {
     "id": "2",
@@ -335,7 +1170,7 @@ window.TCCC_TIERS = {
       }
     ],
     "passRule": "all_critical",
-    "minimumScore": 0.0,
+    "minimumScore": 0,
     "requireAllCritical": true,
     "proficiencyLabel": "Demonstrated TQ Proficiency",
     "attempts": [
@@ -459,18 +1294,22 @@ window.TCCC_TIERS = {
       {
         "id": "tq_one_min",
         "section": "TQ",
-        "label": "Tourniquet Application — 1 Minute Standard",
+        "label": "Steps 1–7 Tourniquet Application",
         "mode": "max",
         "seconds": 60,
-        "standard": "≤ 1:00",
-        "startLabel": "START",
+        "exclusiveMax": true,
+        "standard": "< 1:00",
+        "displayMode": "count-up",
+        "prominent": true,
+        "pinToSectionTop": true,
+        "startLabel": "START TQ TIMER",
         "stopLabel": "STEP 7 COMPLETE",
         "provenance": "source",
         "linkedItemId": "TQ-10",
         "requiredForPass": true,
         "repeatable": true,
         "timerKind": "clinical",
-        "pausePolicy": "tactical-and-admin",
+        "pausePolicy": "admin-only",
         "resetPolicy": "new-instance",
         "continuousRequired": false,
         "gradingClock": "wall"
@@ -525,7 +1364,7 @@ window.TCCC_TIERS = {
       }
     ],
     "passRule": "all_critical",
-    "minimumScore": 0.0,
+    "minimumScore": 0,
     "requireAllCritical": true,
     "proficiencyLabel": "Demonstrated NPA Proficiency",
     "attempts": [
@@ -662,7 +1501,7 @@ window.TCCC_TIERS = {
       }
     ],
     "passRule": "all_critical",
-    "minimumScore": 0.0,
+    "minimumScore": 0,
     "requireAllCritical": true,
     "proficiencyLabel": "Demonstrated NDC Proficiency",
     "attempts": [
@@ -835,7 +1674,7 @@ window.TCCC_TIERS = {
       }
     ],
     "passRule": "all_critical",
-    "minimumScore": 0.0,
+    "minimumScore": 0,
     "requireAllCritical": true,
     "proficiencyLabel": "Demonstrated Blood Administration Proficiency",
     "attempts": [
